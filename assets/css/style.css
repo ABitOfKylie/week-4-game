@@ -1,0 +1,124 @@
+
+body {
+}
+#background{
+	background-image: url("../images/gemstoneBackground.jpg");
+
+}
+.hImage{
+	 width: 200px;
+     height: 190px;
+     float:right;
+     z-index: 4;
+     position:relative;
+     opacity:0.8;
+     border-radius:15px;
+     margin-top: 9px;
+     padding-right: 9px:;
+}
+h1{
+	font-size:80px;
+	font-weight:900;
+	color:black;
+	line-height:200%;
+	font-family:fantasy;
+	text-align:center;
+	padding:35px 10px 5px 90px;
+	max-width: auto;
+	background: radial-gradient(whitesmoke, pink);	opacity:0.9;
+	z-index: 3;
+	position: relative;
+
+}
+h2 {
+	font-size:25px;
+	font-family:fantasy;
+	color:indigo;
+	width:150px;
+	height:100px;
+	line-height: 150%;
+	padding:20px 0px;
+	max-width:45%;
+	text-align:center;
+	float:left;
+
+}
+h3 {
+	font-size:43px;
+	font-family:fantasy;
+	font-weight:900;
+	color:indigo;
+	width:200px;
+	height:112px;
+	line-height: 135%;
+	text-align:center;
+	margin:30px 0px;
+	float:left;
+	-webkit-transform: rotate(-35deg); 
+    -moz-transform: rotate(-35deg);	
+}
+p {
+	font-size:31px;
+	font-weight:900;
+	font-family:fantasy;
+	line-height: 120%;
+	text-align: left;
+	color:indigo;
+ 	padding:20px;
+	border:antiquewhite, solid,10px;
+	border-radius: 5px;
+}
+ul{
+	width:240px;
+	display:inline;
+}
+
+
+
+.totalTally{
+	width:300px;
+}
+#GamePlay{
+	font-size:21px;
+	font-family:fantasy;
+	font-weight: 900;
+	color:indigo;
+	line-height: 175%;
+	text-align:center;
+	background: radial-gradient(whitesmoke, pink);	opacity:0.9;
+	padding:25px 10px;
+	text-align:center;
+	float:left;
+	overflow: auto; 
+}
+.grad{
+	background: radial-gradient(thistle,mediumpurple,indigo);
+	outline: solid midnightblue;
+	background-color:#7736c9;
+}
+
+figure{
+	float:right;
+	background: indigo;
+}
+figcaption{
+	color:white;
+	font-size:18px;
+	font-weight:700;
+	line-height: 120%;
+	text-align: center;
+	padding:15px;
+}
+
+.cImage{
+     width: 175px;
+     height: 200px;
+     padding:15px;
+    }
+
+
+#random{
+	width:255px;
+	height:155px;
+	line-height: 175%;
+	}

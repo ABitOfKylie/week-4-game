@@ -1,0 +1,31 @@
+player will fight with a character of their choice
+$(document).ready(function(){
+	
+		// at start choose a character picture need function
+			//need functionality to creat characters,
+			how to store characters 
+			Possible solutions:objects/arrays?
+			output those characters to the screen as html
+			doc getelementbyID
+		// need way of tracking main character 
+
+		// Every character that was not picked is now an enemy that the player must defeat. Enemies shoule be moved to a different area of the screen. 
+			//need functionality that tracking enemies and outputs them to other part of screen.
+		// possibly neet to use existing div.
+		// 
+
+		The player chooses which enemy they will attack by clicking on the enemy's picture
+			// using jquery use some kind of event handling for clicks -- 
+			// once event is fired ther should be functionality to move that enemy to a defender area -- Will likely need another area for this. 
+
+
+});
+
+//  want to fade out and then fade in with new image - 
+To fade one image out and fade another one in, you can pass a callback function to fadeOut. Inside the callback (which will be called as soon as the fadeout animation completes), swap out the img src and fade it back in:
+$("#showImage").fadeOut(
+  function(){
+    $(this).attr('src', drawCard[drawNum])
+    .fadeIn();
+  }
+); // end fadeOut

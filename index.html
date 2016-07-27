@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crystal Collector</title>
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+	<link type="text/css" rel="stylesheet" href="assets/css/reset.css"/>
+	<link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+	<script src="assets/javascript/game.js"></script>
+
+</head>
+	
+	
+<body id="background">
+	<header>
+	<img class="hImage" src="assets/images/Crystal.jpg" alt="Crystal">
+	<h1>Crystal Collector</h1>
+	</header>
+		<container>
+			<section id="GamePlay">
+				<h3>Game Play</h3>
+					<p>You will be give a random number at the start of the game. The object of the game is to match your total score with the random number. <br> Each of the four crystals below have a specific hidden value. By clicking on a crystal that value/number of points will be added to your total score. Each time the game restarts, the hidden values of the crystals will change.<br> If you match your score with the random number you win, if your total score exceeds the random number, you lose.</p>
+			</section>
+			<section class="totalTally">
+				<div>
+					<h2 class="grad">Match this<br> 
+					<span id="random">###</span></h2>
+				</div>
+
+				<div>
+					<h2 id="totalScore" class="grad"> Your Total Score is: ###</h2>
+					
+				</div>
+			
+				<div>
+					<h2 id="win" class="grad">Wins:  0<span id="loss"><br>Losses: 0</span></h2>
+					<br>
+					<button id="loss" class="grad">Losses:<br>0</button>
+				</div>>
+			</section>
+
+			<section>
+					<ul>
+						<li> 
+							<figure><img id="Crys1" class="cImage" src="assets/images/topaz.jpg" alt="Topaz" value=0>
+  								<figcaption>Balance, Calm.
+  								</figcaption>
+							</figure>
+						</li>
+						<li > 
+							<figure><img id="Crys2" class="cImage" src="assets/images/aquamarine.jpg" alt="Aquamarine" value=0>
+  								<figcaption>Courage, Inner Peace.
+  								</figcaption>
+							</figure>
+						</li>
+						<li> 
+							<figure><img id="Crys3" class="cImage" src="assets/images/tanzanite.jpg" alt="Tanzanite" value=0>
+  								<figcaption>Poise, Harmony
+  								</figcaption>
+							</figure>
+						</li>		
+						<li> 
+							<figure><img id="Crys4" class="cImage" src="assets/images/tourmaline.jpg" alt="Tourmaline" value=0>
+  								<figcaption>Happiness, Hope
+  								</figcaption>
+							</figure>
+						</li>					
+					</ul>
+			</section>
+ 		</container>
+ 	<footer></footer>
+<script type="text/javascript"></script>
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+
+ 	</body>
+
+ </html>
