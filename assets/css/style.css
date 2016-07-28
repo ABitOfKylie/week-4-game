@@ -34,8 +34,8 @@ h2 {
 	font-size:25px;
 	font-family:fantasy;
 	color:indigo;
-	width:150px;
-	height:100px;
+	width:115px;
+	height:95px;
 	line-height: 150%;
 	padding:20px 0px;
 	max-width:45%;
@@ -77,6 +77,19 @@ ul{
 
 .totalTally{
 	width:300px;
+}
+
+#reset{
+	font-size:30px;
+	font-family:fantasy;
+	font-weight:700;
+	color:indigo;
+	width:130px;
+	height:112px;
+	margin-right:20px;
+	line-height: 135%;
+	text-align:center;
+	float:right;
 }
 #GamePlay{
 	font-size:21px;
