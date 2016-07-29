@@ -17,13 +17,18 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
     
     	$("#random").html(randomNumber);
    				console.log(randomNumber);
-   		
 
-		$("reset").keyup(function(){
+
+		$("#reset").keyup(function(){
     	totalScore=0;
     	randomNumber=0;
 
 		});
+
+		function resetNow(){
+			totalScore=0;
+    		randomNumber=0;
+		}
 
 
    		function setValues(){
@@ -56,7 +61,7 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
 			alert("Ahhh you lost! Try again");
 			console.log(losses);
 			console.log(counter);
-			window.location.reload();
+			resetNow ();
 
 
 		}
