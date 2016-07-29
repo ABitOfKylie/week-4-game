@@ -9,27 +9,34 @@ var crystal2 = Math.floor((Math.random()*12)+1);
 var crystal3 = Math.floor((Math.random()*12)+1);
 var crystal4 = Math.floor((Math.random()*12)+1);
 var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
-/*var audio = new Audio ("Magic Wand Noise-SoundBible.com-375928671.wav");*/
 
 		$(document).ready(function(){
     			console.log( "ready!" );
-    			
+    	
+    	/*var audioElement = document.createElement('audio');
+		audioElement.setAttribute('src ', 'Assets/mystery.wav');*/
     
     	$("#random").html(randomNumber);
    				console.log(randomNumber);
 
+		function resetNow(){
+			location.reload();
+			totalScore=0;
+    		crystal1 = Math.floor((Math.random()*12)+1);
+			crystal2 = Math.floor((Math.random()*12)+1);
+			crystal3 = Math.floor((Math.random()*12)+1);
+			crystal4 = Math.floor((Math.random()*12)+1);
+    		randomNumber= Math.floor(Math.random()*((120-19)+1)+19);
+		}
+
 
 		$("#reset").keyup(function(){
-    	totalScore=0;
-    	randomNumber=0;
+	    	resetNow();
+	    	alert( "Handler for .keyup() called." );
 
 		});
 
-		function resetNow(){
-			totalScore=0;
-    		randomNumber=0;
-		}
-
+		
 
    		function setValues(){
    			$("#Crys1").data ("value",crystal1);
@@ -45,10 +52,10 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
 			totalScore = totalScore + parseInt($(this).data('value'));
 			$("#totalScore").fadeOut('slow');
 			$("#totalScore").fadeIn('slow');
-			$("#totalScore").html("Your Total Score i*s " + "   " + totalScore);
-    		ifRun();
-    		console.log($(this).data("value"));
-});
+			$("#totalScore").html("Your Total Score is " + "<br>" + totalScore);
+			/*audioElement.play();*/
+			ifRun();
+		});
 
    		function ifRun(){
 		if (totalScore<randomNumber && counter<11){
@@ -57,26 +64,25 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
 		else if(totalScore>randomNumber && counter<11){
 			losses++;
 			counter++;
-			$("#loss").html(losses);
+			$("#loss").html("Losses: " + losses);
 			alert("Ahhh you lost! Try again");
 			console.log(losses);
 			console.log(counter);
-			resetNow ();
-
-
+			location.reload();
 		}
 		else if (totalScore===randomNumber && counter<11){
 			wins++;
 			counter++;
-			$("#win").html(wins);
+			$("#win").html("Wins: "+ wins);
 			alert("Congrats - you win!");
+			location.reload();
 		}
 		else{ // counter=11 - only 10 games then reset 
 			counter++;
 			
 			console.log("last else");
 			alert("You've run out of games!")
-			window.location.reload();
+			location.reload();
 		}
 	}; // close if/else function -- 
 	});
