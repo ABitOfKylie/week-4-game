@@ -17,6 +17,14 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
     
     	$("#random").html(randomNumber);
    				console.log(randomNumber);
+   		
+
+		$("reset").keyup(function(){
+    	totalScore=0;
+    	randomNumber=0;
+
+		});
+
 
    		function setValues(){
    			$("#Crys1").data ("value",crystal1);
@@ -33,10 +41,11 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
 			$("#totalScore").fadeOut('slow');
 			$("#totalScore").fadeIn('slow');
 			$("#totalScore").html("Your Total Score i*s " + "   " + totalScore);
+    		ifRun();
     		console.log($(this).data("value"));
 });
 
-
+   		function ifRun(){
 		if (totalScore<randomNumber && counter<11){
 			console.log("first if - keep going");
 		}
@@ -47,6 +56,9 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
 			alert("Ahhh you lost! Try again");
 			console.log(losses);
 			console.log(counter);
+			window.location.reload();
+
+
 		}
 		else if (totalScore===randomNumber && counter<11){
 			wins++;
@@ -60,8 +72,8 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
 			console.log("last else");
 			alert("You've run out of games!")
 			window.location.reload();
-		};
-
+		}
+	}; // close if/else function -- 
 	});
 
  
