@@ -1,4 +1,6 @@
+html{
 
+}
 body {
 }
 #background{
@@ -75,17 +77,18 @@ ul{
 
 
 
-/*.totalTally{
+.totalTally{
 	width:300px;
+	float:right;
 }
 #gems{
-	width:650px;
-}*/
+	width:950px;
+}
 
 #reset{
-	font-size:30px;
+	font-size:25px;
 	font-family:fantasy;
-	font-weight:700;
+	/*font-weight:700;*/
 	color:indigo;
 	width:130px;
 	height:112px;
@@ -114,7 +117,7 @@ ul{
 }
 
 figure{
-	float:right;
+	float:left;
 	background: indigo;
 	width:225px;
 }

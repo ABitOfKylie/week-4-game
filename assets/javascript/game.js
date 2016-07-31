@@ -2,6 +2,7 @@ var totalScore = 0;
 var wins = 0;
 var losses = 0;
 var counter = 0;
+var grem= 6-counter;
 // latest version as of 7/28 3:20pm
 
 var crystal1 = Math.floor((Math.random()*12)+1);
@@ -15,29 +16,29 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
     	
     	/*var audioElement = document.createElement('audio');
 		audioElement.setAttribute('src ', 'Assets/mystery.wav');*/
-    
     	$("#random").html(randomNumber);
-   				console.log(randomNumber);
+   				console.log("randomNumber");
 
 		function resetNow(){
-			location.reload();
 			totalScore=0;
+			$("#totalScore").html(totalScore);
     		crystal1 = Math.floor((Math.random()*12)+1);
 			crystal2 = Math.floor((Math.random()*12)+1);
 			crystal3 = Math.floor((Math.random()*12)+1);
 			crystal4 = Math.floor((Math.random()*12)+1);
     		randomNumber= Math.floor(Math.random()*((120-19)+1)+19);
+    		$("#random").html(randomNumber);
+    		counter++;
 		}
 
 
-		$("#reset").keyup(function(){
+		$("#reset").click(function(){	    	
+	    	$("#rem").html(grem) +" / 5"<br>" games remaining";
 	    	resetNow();
-	    	alert( "Handler for .keyup() called." );
-
-		});
-
+	    	alert( ".click() called." );
+	    	
+		});    	
 		
-
    		function setValues(){
    			$("#Crys1").data ("value",crystal1);
    			$("#Crys2").data ("value",crystal2);
@@ -50,40 +51,43 @@ var randomNumber = Math.floor(Math.random()*((120-19)+1)+19);
     		setValues();
     		$(this).data("value"); 
 			totalScore = totalScore + parseInt($(this).data('value'));
-			$("#totalScore").fadeOut('slow');
-			$("#totalScore").fadeIn('slow');
-			$("#totalScore").html("Your Total Score is " + "<br>" + totalScore);
+			$("#totalScore").fadeOut('fast');
+			$("#totalScore").fadeIn('fast');
+			$("#totalScore").html(totalScore);
 			/*audioElement.play();*/
 			ifRun();
 		});
 
    		function ifRun(){
-		if (totalScore<randomNumber && counter<11){
+		if (totalScore<randomNumber && counter<=5){
 			console.log("first if - keep going");
 		}
-		else if(totalScore>randomNumber && counter<11){
+		else if(totalScore>randomNumber && counter<=5){
 			losses++;
 			counter++;
 			$("#loss").html("Losses: " + losses);
 			alert("Ahhh you lost! Try again");
 			console.log(losses);
 			console.log(counter);
-			location.reload();
+			resetNow();
+			
 		}
-		else if (totalScore===randomNumber && counter<11){
+		else if (totalScore===randomNumber && counter<=5){
 			wins++;
 			counter++;
 			$("#win").html("Wins: "+ wins);
 			alert("Congrats - you win!");
-			location.reload();
+			resetNow();
 		}
-		else{ // counter=11 - only 10 games then reset 
+		
+		else { 
 			counter++;
-			
 			console.log("last else");
 			alert("You've run out of games!")
-			location.reload();
+			resetNow();
+			counter=0;
 		}
+		
 	}; // close if/else function -- 
 	});
 

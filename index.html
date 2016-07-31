@@ -21,25 +21,8 @@
 			<section id="GamePlay">
 				<h3>Game Play</h3>
 					<p>You will be give a random number at the start of the game. The object of the game is to match your total score with the random number. <br> Each of the four crystals below have a specific hidden value. By clicking on a crystal that value/number of points will be added to your total score. Each time the game restarts, the hidden values of the crystals will change.<br> If you match your score with the random number you win, if your total score exceeds the random number, you lose.</p>
-					<button id="reset" class="grad">Reset</button>
-			</section>
-			<section class="totalTally">
-				<div>
-					<h2 class="grad">Match this<br> 
-					<span id="random">###</span></h2>
-				</div>
-
-				<div>
-					<h2 id="totalScore" class="grad"> Your Total Score is: <br>###</h2>
 					
-				</div>
-			
-				<div>
-					<h2 id="win" class="grad">Wins: 0<span id="loss"><br>Losses: 0</span></h2>
-					
-				</div>
-			</section>
-
+			<wrapper>
 			<section id="gems">
 					<ul>
 						<li> 
@@ -68,6 +51,31 @@
 						</li>					
 					</ul>
 			</section>
+
+					
+			</section>
+
+
+			<section class="totalTally">
+				<div>
+					<h2 class="grad">Match this number<br>
+					<span id="random">###</span></h2>
+				</div>
+
+				<div>
+					<h2  class="grad"> Your Total Score is: <br><span id="totalScore"> ###</span></h2>
+					
+				</div>
+			
+				<div>
+					<h2 id="win" class="grad">Wins: 0<br><span id="loss">Losses: 0</span></h2>
+					
+				</div>
+				<button id="reset" class="grad">Reset<br>Games left: <span id="rem">5</span></button>
+
+			</section>
+		</wrapper>
+
  		</container>
  	<footer></footer>
 <script type="text/javascript"></script>
